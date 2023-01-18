@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+:root {
+    --accent: greenyellow;
+    --bg: rgb(20,20,20);
+    --txt75: rgba(255,255,255,0.75);
+    --txt50: rgba(255,255,255,0.5);
+    --branco-rgb: 255,255,255
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--txt75);
+    font-family: 'Work Sans';
+    font-weight: 300;
+}
+
+input, select {
+    color:var(--txt75);
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 0.5px solid rgba(var(--branco-rgb), 0.2);
+    border-radius: 10px;
+    font-size: medium;
+    padding: 12px 15px;
+    margin: 5px;
+}
+
+input::placeholder{
+    color: var(--txt50);
+    font-style: italic;
+}
+
+input:hover, select:hover {
+    background-color: rgba(var(--branco-rgb),0.08);
+    border-color: rgba(var(--branco-rgb), 0.75);
+}
+
+input:focus, select:focus {
+    border: 1px solid var(--accent);
+    outline: none;
+    color: white;
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    border: 0.5px solid rgb(180, 180, 180);
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+input[type='checkbox']:checked {
+    background-image: url('./checkmark.svg') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+fieldset {
+    /* display: flex; */
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--txt75);
+    margin: 15px;
+}
+
+.pressioneEnter{
+    display: block;
+}
+
+.TUSSInput:placeholder-shown + .adcProcedimento {
+    display: none;
+}
+.TUSSInputBtn {
+    /* border: 1px solid white; */
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.TUSSInputBtn input {
+    flex-grow: 1;
+}
+
+.TUSSInputBtn button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+[list]:not([list=""]) {
+    background:url('BuscarIcone.svg') no-repeat;
+    background-position: right 10px center;
+}
+
+.adcProcedimento {
+    font-weight: thin;
+    font-size: 1rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    color: var(--accent);
+    background-color: var(--bg);
+}
+
+.enter {
+    display: none;
+    fill:none;
+    fill-rule:nonzero;
+    stroke: var(--accent);
+    stroke-width:1.5px;
+}
+
+ol ::marker {
+    color: pink;
+}
+
+li {
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding: 10px;
+}
+
+li div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li:hover .exame-deletar {
+    opacity: 1;
+}
+
+.exame-descricao {
+    flex-grow: 1;
+}
+
+.exame-codigo {
+    padding: 0 10px;
+    font-family: 'Inconsolata', monospace;
+    /* letter-spacing: 1pt; */
+    font-weight: lighter;
+    font-size:larger;
+    color: rgba(255,255,255,0.5);
+}
+
+.exame-deletar{
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: rgba(173,255,47,0.75);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    transform: translateX(10px)
+}
+
+.exame-deletar:hover span {
+    font-size: 0;
+}
+
+.exame-deletar:hover::after{
+    font-size: 52;
+    content: "Remover";
+    padding-left: 0.5rem;
+    color: var(--accent);
+}
+
+
+/* NOVOS ESTILOS DE CAMPO */
+
+.campo-div {
+    position: relative;
+    margin-left: 20px;
+}
+
+.campo-label {
+    position: absolute;
+    left: 10px;
+    top: 1rem;
+    transition: all 0.2s;
+    padding: 0 3px;
+    margin-left: 7px;
+    z-index: 1;
+    font-weight: 400;
+    font-size: medium;
+    color:#b3b3b3
+}
+
+.campo-input {
+    padding:  0.8rem 20px;
+    border: 2px solid #382f26;
+    background-color: #272530;
+    border-radius: 5px;
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: white;
+}
+
+.campo-label::before {
+    content: "";
+    height: 5px;
+    background-color: #272530;
+    position: absolute;
+    top: 10px;
+    left:0px;
+    width:100%;
+    z-index: -1;
+}
+
+.campo-input:focus {
+    border: 2px solid #fd7f0a !important;
+}
+
+.campo-input:focus + .campo-label, .filled {
+    top: -10px;
+    color: #fd7f0a;
+    font-size: 12px;
+}
+
+.campo-input::placeholder {
+    font-size: 16px;
+    color: rgba(255,255,255,0.3);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.campo-input:focus::placeholder {
+    opacity: 1;
+    animation-delay: 0.2s;
+}
+
+.campo-input:not(:placeholder-shown)+label{
+    top: -10px;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+}
+
+.campo-input:not(:placeholder-shown){
+    border: 1px solid rgba(255,255,255,0.5);
+}

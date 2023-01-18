@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    background-color: #282828;
+}
+
+.procedimento-card {
+    background-color: #333;
+    color: white;
+    font-family: 'Lato';
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.procedimento-card:hover {
+    background-color: rgb(55, 55, 55);
+}
+.procedimento-ativo {
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.procedimento-codigo {
+    opacity: 0.5;
+}

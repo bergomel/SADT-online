@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset> <legend>Dados do beneficiário</legend>
+        
+        <div >
+            <input id="nomeBeneficiario"  placeholder=" ">
+            <label for="nomeBeneficiario" >Nome</label>
+        </div>
+
+        <label for="8">Nº carteira</label>
+        <input id="8">
+
+        <label for="9">Validade carteira</label>
+        <input id="9" type="date">
+
+        <label for="11">CNS</label>
+        <input id="11">
+
+        <label for="12">RN</label>
+        <select id="12">
+            <option value="1">Não</option>
+            <option value="2">Sim</option>
+            </select>
+    </fieldset>
+    <fieldset id="dadosSolicitante">
+        <legend>Dados do solicitante</legend>
+        <label for="nome">Nome</label>
+        <input id="nome">
+        
+        <label>
+            <input list="Conselhos" id="conselho" size="8">
+                <datalist id="Conselhos">
+                    <option>CRM</option>
+                    <option>CRF</option>
+                </datalist>
+        </label>
+        
+        <label for="uf">UF</label>
+        <input id="uf" list="estados" size="5">
+            <datalist id="estados"></datalist>
+        
+        <label for="numeroConselho">Nº Conselho</label>
+        <input id="numeroConselho" size="6">
+
+        <label for="19">CBO</label>
+        <input id="19" list="tabela24" size="9">
+            <datalist id="tabela24"></datalist>
+
+        <div>
+            <button id="lembrarSolicitante" name="lembrarSolicitante">Lembrar meus dados</input>
+        </div>
+    </fieldset>
+    <fieldset> <legend>Dados da solicitação</legend>
+        <div class="TUSSInputBtn" id="TUSSInputBtn">
+            <input list="TUSSLista" class="TUSSInput" name="TUSSInput" id="TUSSInput" placeholder="Digite para pesquisar">
+            <button id="adcProcedimento" class="adcProcedimento">Adicionar</button>
+        </div>
+        <span class="pressioneEnter" id="pressioneEnter" name="pressioneEnter">Pre</span>
+        <datalist id="TUSSLista"></datalist>
+    </div>
+    </fieldset>
+
+    <h3>Exames selecionados</h3>
+    <div>
+        <ol id="exames">
+            <li><div>
+                <span class="exame-descricao">Hemograma com contagem de plaquetas ou frações (eritrograma, leucograma, plaquetas)</span>
+                <span class="exame-codigo" title="código TUSS">11223344</span>
+                <button class="exame-deletar">X</button>
+            </div></li>
+        </ol>
+    </div>
+      <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Rubik';
+    font-size: large;
+    background: #191724;
+    color: #fff;
+}
+
+.campo-div {
+    position: relative;
+    margin-left: 20px;
+}
+
+.campo-label {
+    position: absolute;
+    left: 10px;
+    top: 1rem;
+    transition: all 0.2s;
+    padding: 0 3px;
+    margin-left: 7px;
+    z-index: 1;
+    font-weight: 400;
+    font-size: medium;
+    color:#b3b3b3
+}
+
+.campo-input {
+    padding:  0.8rem 20px;
+    border: 2px solid #382f26;
+    background-color: #272530;
+    border-radius: 5px;
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: white;
+}
+
+.campo-label::before {
+    content: "";
+    height: 5px;
+    background-color: #272530;
+    position: absolute;
+    top: 10px;
+    left:0px;
+    width:100%;
+    z-index: -1;
+}
+
+.campo-input:focus {
+    border: 2px solid #fd7f0a !important;
+}
+
+.campo-input:focus + .campo-label {
+    top: -10px;
+    color: #fd7f0a;
+    font-size: 12px;
+}
+
+.campo-input::placeholder {
+    font-size: 16px;
+    color: rgba(255,255,255,0.3);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.campo-input:focus::placeholder {
+    opacity: 1;
+    animation-delay: 0.2s;
+}
+
+.campo-input:not(:placeholder-shown)+label{
+    top: -10px;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+}
+
+.campo-input:not(:placeholder-shown){
+    border: 1px solid rgba(255,255,255,0.5);
+}

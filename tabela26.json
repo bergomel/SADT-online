@@ -1,0 +1,62 @@
+[
+    {
+        "Código": "CRESS",
+        "Descrição": "Conselho Regional de Serviço Social"
+    },
+    {
+        "Código": "COREN",
+        "Descrição": "Conselho Regional de Enfermagem"
+    },
+    {
+        "Código": "CRF",
+        "Descrição": "Conselho Regional de Farmácia"
+    },
+    {
+        "Código": "CREFONO",
+        "Descrição": "Conselho Regional de Fonoaudiologia"
+    },
+    {
+        "Código": "CREFITO",
+        "Descrição": "Conselho Regional de Fisioterapia e Terapia Ocupacional"
+    },
+    {
+        "Código": "CRM",
+        "Descrição": "Conselho Regional de Medicina"
+    },
+    {
+        "Código": "CRN",
+        "Descrição": "Conselho Regional de Nutrição"
+    },
+    {
+        "Código": "CRO",
+        "Descrição": "Conselho Regional de Odontologia"
+    },
+    {
+        "Código": "CRP",
+        "Descrição": "Conselho Regional de Psicologia"
+    },
+    {
+        "Código": "10",
+        "Descrição": "Outros Conselhos "
+    },
+    {
+        "Código": "CRBio",
+        "Descrição": "Conselho Regional de Biologia"
+    },
+    {
+        "Código": "CRBM",
+        "Descrição": "Conselho Regional de Biomedicina"
+    },
+    {
+        "Código": "CREF",
+        "Descrição": "Conselho Regional de Educação Física"
+    },
+    {
+        "Código": "CRMV",
+        "Descrição": "Conselho Regional de Medicina Veterinária"
+    },
+    {
+        "Código": "CRTR",
+        "Descrição": "Conselho Regional de Técnicos em Radiologia"
+    }
+]

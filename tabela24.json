@@ -1,0 +1,670 @@
+﻿[
+    {
+        "código": "201115",
+        "descrição": "Geneticista"
+    },
+    {
+        "código": "203015",
+        "descrição": "Pesquisador em biologia de microorganismos e parasitas "
+    },
+    {
+        "código": "213150",
+        "descrição": "Físico médico "
+    },
+    {
+        "código": "221105",
+        "descrição": "Biólogo "
+    },
+    {
+        "código": "223204",
+        "descrição": "Cirurgião dentista - auditor "
+    },
+    {
+        "código": "223208",
+        "descrição": "Cirurgião dentista - clínico geral "
+    },
+    {
+        "código": "223212",
+        "descrição": "Cirurgião dentista - endodontista "
+    },
+    {
+        "código": "223216",
+        "descrição": "Cirurgião dentista - epidemiologista "
+    },
+    {
+        "código": "223220",
+        "descrição": "Cirurgião dentista - estomatologista "
+    },
+    {
+        "código": "223224",
+        "descrição": "Cirurgião dentista - implantodontista "
+    },
+    {
+        "código": "223228",
+        "descrição": "Cirurgião dentista - odontogeriatra "
+    },
+    {
+        "código": "223232",
+        "descrição": "Cirurgião dentista - odontologista legal "
+    },
+    {
+        "código": "223236",
+        "descrição": "Cirurgião dentista - odontopediatra "
+    },
+    {
+        "código": "223240",
+        "descrição": "Cirurgião dentista - ortopedista e ortodontista "
+    },
+    {
+        "código": "223244",
+        "descrição": "Cirurgião dentista - patologista bucal "
+    },
+    {
+        "código": "223248",
+        "descrição": "Cirurgião dentista - periodontista "
+    },
+    {
+        "código": "223252",
+        "descrição": "Cirurgião dentista - protesiólogo bucomaxilofacial "
+    },
+    {
+        "código": "223256",
+        "descrição": "Cirurgião dentista - protesista "
+    },
+    {
+        "código": "223260",
+        "descrição": "Cirurgião dentista - radiologista "
+    },
+    {
+        "código": "223264",
+        "descrição": "Cirurgião dentista - reabilitador oral "
+    },
+    {
+        "código": "223268",
+        "descrição": "Cirurgião dentista - traumatologista bucomaxilofacial "
+    },
+    {
+        "código": "223272",
+        "descrição": "Cirurgião dentista de saúde coletiva "
+    },
+    {
+        "código": "223276",
+        "descrição": "Cirurgião dentista - odontologia do trabalho"
+    },
+    {
+        "código": "223280",
+        "descrição": "Cirurgião dentista - dentística"
+    },
+    {
+        "código": "223284",
+        "descrição": "Cirurgião dentista - disfunção temporomandibular e dor orofacial"
+    },
+    {
+        "código": "223288",
+        "descrição": "Cirurgião dentista - odontologia para pacientes com necessidades especiais"
+    },
+    {
+        "código": "223293",
+        "descrição": "Cirurgião-dentista da estratégia de saúde da família"
+    },
+    {
+        "código": "223505",
+        "descrição": "Enfermeiro "
+    },
+    {
+        "código": "223605",
+        "descrição": "Fisioterapeuta geral"
+    },
+    {
+        "código": "223625",
+        "descrição": "Fisioterapeuta respiratória"
+    },
+    {
+        "código": "223630",
+        "descrição": "Fisioterapeuta neurofuncional"
+    },
+    {
+        "código": "223635",
+        "descrição": "Fisioterapeuta traumato-ortopédica funcional"
+    },
+    {
+        "código": "223640",
+        "descrição": "Fisioterapeuta osteopata"
+    },
+    {
+        "código": "223645",
+        "descrição": "Fisioterapeuta quiropraxista"
+    },
+    {
+        "código": "223650",
+        "descrição": "Fisioterapeuta acupunturista"
+    },
+    {
+        "código": "223655",
+        "descrição": "Fisioterapeuta esportivo"
+    },
+    {
+        "código": "223660",
+        "descrição": "Fisioterapeuta  do trabalho"
+    },
+    {
+        "código": "223710",
+        "descrição": "Nutricionista "
+    },
+    {
+        "código": "223810",
+        "descrição": "Fonoaudiólogo "
+    },
+    {
+        "código": "223905",
+        "descrição": "Terapeuta ocupacional "
+    },
+    {
+        "código": "223910",
+        "descrição": "Ortoptista "
+    },
+    {
+        "código": "225103",
+        "descrição": "Médico infectologista "
+    },
+    {
+        "código": "225105",
+        "descrição": "Médico acupunturista "
+    },
+    {
+        "código": "225106",
+        "descrição": "Médico legista"
+    },
+    {
+        "código": "225109",
+        "descrição": "Médico Nefrologista"
+    },
+    {
+        "código": "225110",
+        "descrição": "Médico alergista e imunologista"
+    },
+    {
+        "código": "225112",
+        "descrição": "Médico neurologista "
+    },
+    {
+        "código": "225115",
+        "descrição": "Médico angiologista "
+    },
+    {
+        "código": "225118",
+        "descrição": "Médico nutrologista "
+    },
+    {
+        "código": "225120",
+        "descrição": "Médico cardiologista "
+    },
+    {
+        "código": "225121",
+        "descrição": "Médico oncologista clínico"
+    },
+    {
+        "código": "225122",
+        "descrição": "Médico cancerologista pediátrico"
+    },
+    {
+        "código": "225124",
+        "descrição": "Médico pediatra"
+    },
+    {
+        "código": "225125",
+        "descrição": "Médico clínico"
+    },
+    {
+        "código": "225127",
+        "descrição": "Médico pneumologista "
+    },
+    {
+        "código": "225130",
+        "descrição": "Médico de família e comunidade"
+    },
+    {
+        "código": "225133",
+        "descrição": "Médico psiquiatra "
+    },
+    {
+        "código": "225135",
+        "descrição": "Médico dermatologista "
+    },
+    {
+        "código": "225136",
+        "descrição": "Médico reumatologista "
+    },
+    {
+        "código": "225139",
+        "descrição": "Médico sanitarista"
+    },
+    {
+        "código": "225140",
+        "descrição": "Médico do trabalho "
+    },
+    {
+        "código": "225142",
+        "descrição": "Médico da estratégia de saúde da família"
+    },
+    {
+        "código": "225145",
+        "descrição": "Médico em medicina de tráfego "
+    },
+    {
+        "código": "225148",
+        "descrição": "Médico anatomopatologista"
+    },
+    {
+        "código": "225150",
+        "descrição": "Médico em medicina intensiva "
+    },
+    {
+        "código": "225151",
+        "descrição": "Médico anestesiologista"
+    },
+    {
+        "código": "225155",
+        "descrição": "Médico endocrinologista e metabologista "
+    },
+    {
+        "código": "225160",
+        "descrição": "Médico fisiatra "
+    },
+    {
+        "código": "225165",
+        "descrição": "Médico gastroenterologista "
+    },
+    {
+        "código": "225170",
+        "descrição": "Médico generalista "
+    },
+    {
+        "código": "225175",
+        "descrição": "Médico geneticista "
+    },
+    {
+        "código": "225180",
+        "descrição": "Médico geriatra "
+    },
+    {
+        "código": "225185",
+        "descrição": "Médico Hematologista"
+    },
+    {
+        "código": "225195",
+        "descrição": "Médico Homeopata"
+    },
+    {
+        "código": "225203",
+        "descrição": "Médico em cirurgia vascular"
+    },
+    {
+        "código": "225210",
+        "descrição": "Médico cirurgião cardiovascular "
+    },
+    {
+        "código": "225215",
+        "descrição": "Médico cirurgião de cabeça e pescoço "
+    },
+    {
+        "código": "225220",
+        "descrição": "Médico cirurgião do aparelho digestivo "
+    },
+    {
+        "código": "225225",
+        "descrição": "Médico cirurgião geral "
+    },
+    {
+        "código": "225230",
+        "descrição": "Médico cirurgião pediátrico "
+    },
+    {
+        "código": "225235",
+        "descrição": "Médico cirurgião plástico "
+    },
+    {
+        "código": "225240",
+        "descrição": "Médico cirurgião torácico "
+    },
+    {
+        "código": "225250",
+        "descrição": "Médico ginecologista e obstetra "
+    },
+    {
+        "código": "225255",
+        "descrição": "Médico Mastologista"
+    },
+    {
+        "código": "225260",
+        "descrição": "Médico  neurocirurgião"
+    },
+    {
+        "código": "225265",
+        "descrição": "Médico oftalmologista"
+    },
+    {
+        "código": "225270",
+        "descrição": "Médico ortopedista e traumatologista "
+    },
+    {
+        "código": "225275",
+        "descrição": "Médico otorrinolaringologista "
+    },
+    {
+        "código": "225280",
+        "descrição": "Médico proctologista "
+    },
+    {
+        "código": "225285",
+        "descrição": "Médico urologista "
+    },
+    {
+        "código": "225290",
+        "descrição": "Médico cancerologista cirúrgico"
+    },
+    {
+        "código": "225295",
+        "descrição": "Médico cirurgião da mão"
+    },
+    {
+        "código": "225305",
+        "descrição": "Médico citopatologista "
+    },
+    {
+        "código": "225310",
+        "descrição": "Médico em endoscopia "
+    },
+    {
+        "código": "225315",
+        "descrição": "Médico em medicina nuclear "
+    },
+    {
+        "código": "225320",
+        "descrição": "Médico em radiologia e diagnóstico por imagem "
+    },
+    {
+        "código": "225325",
+        "descrição": "Médico patologista"
+    },
+    {
+        "código": "225330",
+        "descrição": "Médico radioterapeuta "
+    },
+    {
+        "código": "225335",
+        "descrição": "Médico patologista clínico / medicina laboratorial"
+    },
+    {
+        "código": "225340",
+        "descrição": "Médico hemoterapeuta"
+    },
+    {
+        "código": "225345",
+        "descrição": "Médico hiperbarista"
+    },
+    {
+        "código": "225350",
+        "descrição": "Médico neurofisiologista "
+    },
+    {
+        "código": "239425",
+        "descrição": "Psicopedagogo "
+    },
+    {
+        "código": "251510",
+        "descrição": "Psicólogo clínico "
+    },
+    {
+        "código": "251545",
+        "descrição": "Neuropsicólogo "
+    },
+    {
+        "código": "251550",
+        "descrição": "Psicanalista "
+    },
+    {
+        "código": "251605",
+        "descrição": "Assistente social "
+    },
+    {
+        "código": "322205",
+        "descrição": "Técnico de enfermagem "
+    },
+    {
+        "código": "322220",
+        "descrição": "Técnico de enfermagem psiquiátrica "
+    },
+    {
+        "código": "322225",
+        "descrição": "Instrumentador cirúrgico"
+    },
+    {
+        "código": "322230",
+        "descrição": "Auxiliar de enfermagem "
+    },
+    {
+        "código": "516210",
+        "descrição": "Cuidador de idosos"
+    },
+    {
+        "código": "223435",
+        "descrição": "Farmacêutico industrial"
+    },
+    {
+        "código": "223430",
+        "descrição": "Farmacêutico em saúde pública"
+    },
+    {
+        "código": "223415",
+        "descrição": "Farmacêutico analista clínico"
+    },
+    {
+        "código": "223405",
+        "descrição": "Farmacêutico"
+    },
+    {
+        "código": "223420",
+        "descrição": "Farmacêutico de alimentos"
+    },
+    {
+        "código": "223440",
+        "descrição": "Farmacêutico toxicologista"
+    },
+    {
+        "código": "223445",
+        "descrição": "Farmacêutico hospitalar e clínico"
+    },
+    {
+        "código": "223425",
+        "descrição": "Farmacêutico práticas integrativas e complementares"
+    },
+    {
+        "código": "223565",
+        "descrição": "Enfermeiro da estratégia de saúde da família"
+    },
+    {
+        "código": "223560",
+        "descrição": "Enfermeiro sanitarista"
+    },
+    {
+        "código": "223555",
+        "descrição": "Enfermeiro puericultor e pediátrico"
+    },
+    {
+        "código": "223550",
+        "descrição": "Enfermeiro psiquiátrico"
+    },
+    {
+        "código": "223545",
+        "descrição": "Enfermeiro obstétrico"
+    },
+    {
+        "código": "223540",
+        "descrição": "Enfermeiro neonatologista"
+    },
+    {
+        "código": "223535",
+        "descrição": "Enfermeiro nefrologista"
+    },
+    {
+        "código": "223530",
+        "descrição": "Enfermeiro do trabalho"
+    },
+    {
+        "código": "223525",
+        "descrição": "Enfermeiro de terapia intensiva"
+    },
+    {
+        "código": "223520",
+        "descrição": "Enfermeiro de centro cirúrgico"
+    },
+    {
+        "código": "223515",
+        "descrição": "Enfermeiro de bordo"
+    },
+    {
+        "código": "223510",
+        "descrição": "Enfermeiro auditor"
+    },
+    {
+        "código": "223570",
+        "descrição": "Perfusionista"
+    },
+    {
+        "código": "223705",
+        "descrição": "Dietista"
+    },
+    {
+        "código": "223845",
+        "descrição": "Fonoaudiólogo em voz"
+    },
+    {
+        "código": "223830",
+        "descrição": "Fonoaudiólogo em linguagem"
+    },
+    {
+        "código": "223825",
+        "descrição": "Fonoaudiólogo em disfagia"
+    },
+    {
+        "código": "223835",
+        "descrição": "Fonoaudiólogo em motricidade orofacial"
+    },
+    {
+        "código": "223840",
+        "descrição": "Fonoaudiólogo em saúde coletiva"
+    },
+    {
+        "código": "223820",
+        "descrição": "Fonoaudiólogo em audiologia"
+    },
+    {
+        "código": "223815",
+        "descrição": "Fonoaudiólogo educacional"
+    },
+    {
+        "código": "225154",
+        "descrição": "Médico antroposófico"
+    },
+    {
+        "código": "999999",
+        "descrição": "CBO do prestador solicitante desconhecido ou não informado "
+    },
+    {
+        "código": "221205",
+        "descrição": "Biomédico"
+    },
+    {
+        "código": "224105",
+        "descrição": "Avaliador físico"
+    },
+    {
+        "código": "224110",
+        "descrição": "Ludomotricista"
+    },
+    {
+        "código": "224115",
+        "descrição": "Preparador de atleta"
+    },
+    {
+        "código": "224120",
+        "descrição": "Preparador físico"
+    },
+    {
+        "código": "224125",
+        "descrição": "Técnico de desporto individual e coletivo (exceto futebol)"
+    },
+    {
+        "código": "224130",
+        "descrição": "Técnico de laboratório e fiscalização desportiva"
+    },
+    {
+        "código": "224135",
+        "descrição": "Treinador profissional de futebol"
+    },
+    {
+        "código": "226305",
+        "descrição": "Musicoterapeuta"
+    },
+    {
+        "código": "225355",
+        "descrição": "Médico radiologista intervencionista"
+    },
+    {
+        "código": "239440",
+        "descrição": "Neuropsicopedagogo clinico"
+    },
+    {
+        "código": "239445",
+        "descrição": "Neuropsicopedagogo institucional"
+    },
+    {
+        "código": "251555",
+        "descrição": "Psicólogo acupunturista"
+    },
+    {
+        "código": "223915",
+        "descrição": "Psicomotricista"
+    },
+    {
+        "código": "226310",
+        "descrição": "Arteterapeuta"
+    },
+    {
+        "código": "226315",
+        "descrição": "Equoterapeuta"
+    },
+    {
+        "código": "322120",
+        "descrição": "Massoterapeuta"
+    },
+    {
+        "código": "322125",
+        "descrição": "Terapeuta holístico"
+    },
+    {
+        "código": "224140",
+        "descrição": "Profissional de educação física na saúde"
+    },
+    {
+        "código": "131220",
+        "descrição": "Gerontólogo"
+    },
+    {
+        "código": "226105",
+        "descrição": "Quiropraxista"
+    },
+    {
+        "código": "226110",
+        "descrição": "Osteopata"
+    },
+    {
+        "código": "226320",
+        "descrição": "Naturólogo"
+    },
+    {
+        "código": "322135",
+        "descrição": "Doula"
+    }
+]

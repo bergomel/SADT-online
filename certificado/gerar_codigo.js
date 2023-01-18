@@ -1,0 +1,1 @@
+const rand = Math.random()
