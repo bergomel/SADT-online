@@ -7,65 +7,86 @@
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
+
 <body>
+
     <fieldset> <legend>Dados do beneficiário</legend>
         
-        <div >
-            <input id="nomeBeneficiario"  placeholder=" ">
-            <label for="nomeBeneficiario" >Nome</label>
+        <div class="campo-div">
+            <input id="nomeBeneficiario" class="campo-input" placeholder=" " size="30">
+            <label for="nomeBeneficiario" class="campo-label">Nome</label>
+        </div>
+        
+        <div class="campo-div">
+            <input id="campo8" class="campo-input" placeholder=" " size="10">
+            <label for="campo8" class="campo-label">Nº carteira</label>
         </div>
 
-        <label for="8">Nº carteira</label>
-        <input id="8">
+        <div class="campo-div">
+            <input id="campo9" class="campo-input" placeholder=" " size="10">
+            <label for="campo9" class="campo-label">Validade</label>
+        </div>
 
-        <label for="9">Validade carteira</label>
-        <input id="9" type="date">
+        <div class="campo-div">
+            <input id="campo11" class="campo-input" placeholder=" ">
+            <label for="campo11" class="campo-label">CNS</label>
+        </div>
 
-        <label for="11">CNS</label>
-        <input id="11">
-
-        <label for="12">RN</label>
-        <select id="12">
-            <option value="1">Não</option>
-            <option value="2">Sim</option>
+        <div class="campo-div">
+            <input id="campo12" class="campo-input" placeholder=" " list="lista12" size="5">
+            <label for="campo12" class="campo-label">RN</label>
+            <datalist id="lista12">
+                <option>Não</option>
+                <option>Sim</option>
             </select>
+        </div>
+
     </fieldset>
+
     <fieldset id="dadosSolicitante">
         <legend>Dados do solicitante</legend>
-        <label for="nome">Nome</label>
-        <input id="nome">
+        <div class="campo-div">
+            <input id="nomeSolicitante" class="campo-input" placeholder=" " size="30">
+            <label for="nomeSolicitante" class="campo-label">Nome</label>
+        </div>
         
-        <label>
-            <input list="Conselhos" id="conselho" size="8">
-                <datalist id="Conselhos">
-                    <option>CRM</option>
-                    <option>CRF</option>
-                </datalist>
-        </label>
+        <div class="campo-div">
+            <input id="solicitante-conselho" class="campo-input" placeholder=" " size="8" list="lista-conselho">
+            <label for="solicitante-conselho" class="campo-label">Conselho</label>
+            <datalist id="lista-conselho"></datalist>
+        </div>
         
-        <label for="uf">UF</label>
-        <input id="uf" list="estados" size="5">
-            <datalist id="estados"></datalist>
+        <div class="campo-div">
+            <input id="solicitante-uf" class="campo-input" placeholder=" " size="4" list="lista-uf">
+            <label for="solicitante-uf" class="campo-label">UF</label>
+            <datalist id="lista-uf"></datalist>
+        </div>
         
-        <label for="numeroConselho">Nº Conselho</label>
-        <input id="numeroConselho" size="6">
+        <div class="campo-div">
+            <input id="solicitante-numero" class="campo-input" placeholder=" " size="8">
+            <label for="solicitante-numero" class="campo-label">Nº Conselho</label>
+        </div>
 
-        <label for="19">CBO</label>
-        <input id="19" list="tabela24" size="9">
-            <datalist id="tabela24"></datalist>
+        <div class="campo-div">
+            <input id="solicitante-cbo" class="campo-input" placeholder=" " size="8" list="lista-cbo">
+            <label for="solicitante-cbo" class="campo-label">CBO</label>
+            <datalist id="lista-cbo"></datalist>
+        </div>
 
         <div>
             <button id="lembrarSolicitante" name="lembrarSolicitante">Lembrar meus dados</input>
         </div>
     </fieldset>
+
     <fieldset> <legend>Dados da solicitação</legend>
-        <div class="TUSSInputBtn" id="TUSSInputBtn">
-            <input list="TUSSLista" class="TUSSInput" name="TUSSInput" id="TUSSInput" placeholder="Digite para pesquisar">
-            <button id="adcProcedimento" class="adcProcedimento">Adicionar</button>
+        
+        <div class="campo-div" id="procedimento-div">
+            <input id="procedimento" class="campo-input" placeholder="Digite para pesquisar" list="lista-procedimento">
+            <label for="procedimento" class="campo-label">Procedimento</label>
+            <datalist id="lista-procedimento"></datalist>
+            <button id="botao-adc-procedimento">Enter</button>
         </div>
-        <span class="pressioneEnter" id="pressioneEnter" name="pressioneEnter">Pre</span>
-        <datalist id="TUSSLista"></datalist>
-    </div>
+        
     </fieldset>
 
     <h3>Exames selecionados</h3>

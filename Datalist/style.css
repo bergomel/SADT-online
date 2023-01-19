@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
 
 :root {
-    --accent: greenyellow;
-    --bg: rgb(20,20,20);
+    --accent: rgb(253, 127, 10);
+    --accent-rgb: 253, 127, 10;
+    --bg: #191724;
     --txt75: rgba(255,255,255,0.75);
     --txt50: rgba(255,255,255,0.5);
     --branco-rgb: 255,255,255
@@ -13,105 +14,21 @@
 body {
     background-color: var(--bg);
     color: var(--txt75);
-    font-family: 'Work Sans';
+    font-family: 'Rubik';
     font-weight: 300;
 }
 
-input, select {
-    color:var(--txt75);
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 0.5px solid rgba(var(--branco-rgb), 0.2);
-    border-radius: 10px;
-    font-size: medium;
-    padding: 12px 15px;
-    margin: 5px;
-}
-
-input::placeholder{
-    color: var(--txt50);
-    font-style: italic;
-}
-
-input:hover, select:hover {
-    background-color: rgba(var(--branco-rgb),0.08);
-    border-color: rgba(var(--branco-rgb), 0.75);
-}
-
-input:focus, select:focus {
-    border: 1px solid var(--accent);
-    outline: none;
-    color: white;
-}
-
-input[type='checkbox'] {
-    appearance: none;
-    border: 0.5px solid rgb(180, 180, 180);
-    height: 2.5rem;
-    width: 2.5rem;
-}
-
-input[type='checkbox']:checked {
-    background-image: url('./checkmark.svg') !important;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 fieldset {
-    /* display: flex; */
-    align-items: center;
-    font-family: 'Work Sans', sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    border: 2px solid rgba(255, 255, 255, 5%);
+    border-radius: 5px;
     color: var(--txt75);
     margin: 15px;
-}
-
-.pressioneEnter{
-    display: block;
-}
-
-.TUSSInput:placeholder-shown + .adcProcedimento {
-    display: none;
-}
-.TUSSInputBtn {
-    /* border: 1px solid white; */
-    padding: 1px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-.TUSSInputBtn input {
-    flex-grow: 1;
-}
-
-.TUSSInputBtn button {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-[list]:not([list=""]) {
-    background:url('BuscarIcone.svg') no-repeat;
-    background-position: right 10px center;
-}
-
-.adcProcedimento {
-    font-weight: thin;
-    font-size: 1rem;
-    height: 2.5rem;
-    border-radius: 10px;
-    border: none;
-    color: var(--accent);
-    background-color: var(--bg);
-}
-
-.enter {
-    display: none;
-    fill:none;
-    fill-rule:nonzero;
-    stroke: var(--accent);
-    stroke-width:1.5px;
+    color: hsla(0, 0%, 100%, 50%);
+    font-size: smaller;
+    font-weight: 500;
 }
 
 ol ::marker {
@@ -168,12 +85,37 @@ li:hover .exame-deletar {
     color: var(--accent);
 }
 
+#procedimento-div {
+    flex-grow: 0.7;
+}
+
+#procedimento {
+    width: 100%;
+}
+
+#botao-adc-procedimento {
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    background-color: rgba(255, 255, 255, 5%);
+    color: rgba(255,255,255,0.3);
+    padding: 5px 12px;
+    border: 1px solid rgba(255,255,255,0.2)
+}
+
+#botao-adc-procedimento:focus {
+    outline: none;
+    border-color: rgba(var(--branco-rgb), 50%);
+    color: rgba(var(--branco-rgb), 75%);
+}
 
 /* NOVOS ESTILOS DE CAMPO */
 
 .campo-div {
     position: relative;
-    margin-left: 20px;
+    margin: 5px;
 }
 
 .campo-label {
@@ -186,20 +128,20 @@ li:hover .exame-deletar {
     z-index: 1;
     font-weight: 400;
     font-size: medium;
-    color:#b3b3b3
+    color:hsla(0, 0%, 100%, 50%)
 }
 
 .campo-input {
-    padding:  0.8rem 20px;
-    border: 2px solid #382f26;
-    background-color: #272530;
+    padding:  0.8rem 10px 0.8rem 20px;
+    border: 2px solid hsla(0, 0%, 100%, 10%);
+    background-color: var(--bg);
     border-radius: 5px;
     font-family: 'Rubik';
     font-weight: 600;
     font-size: 18px;
     outline: none;
     transition: all 0.3s;
-    color: white;
+    color: hsl(0, 0%, 100%);
 }
 
 .campo-label::before {

@@ -1,4 +1,4 @@
-import tuss, {estados, tabela24} from './start.js'
+import tuss, {estados, tabela24, tabela26} from './start.js'
 class procedimento {
     constructor(código, descrição) {
         this.código = código;
@@ -26,13 +26,19 @@ document.getElementById("lembrarSolicitante").addEventListener('click', function
 
 // <<  DATALIST  >>
 
-function appendDatalist(listaJson, datalistID) {
+function appendDatalist(listaJson, datalistID, mostrarDescricao = false) {
     var datalistElement = document.getElementById(datalistID);
     for (var i =0; i<listaJson.length; i++) {
         var opção = document.createElement("option")
-        opção.value = listaJson[i].código;
-        opção.innerHTML = listaJson[i].descrição;
-        datalistElement.appendChild(opção)
+        if (mostrarDescricao == false) {
+            opção.value = listaJson[i].código;
+            opção.innerHTML = listaJson[i].descrição;
+            datalistElement.appendChild(opção)
+        } else {
+            opção.innerHTML = listaJson[i].código;
+            opção.value = listaJson[i].descrição;
+            datalistElement.appendChild(opção)
+        }
     }
 }
 
@@ -42,27 +48,28 @@ function removeAllChildNodes(parent) {
         }
     }
 
-appendDatalist(tuss, "TUSSLista")
-appendDatalist(estados, "estados")
-appendDatalist(tabela24, "tabela24")
+appendDatalist(tuss, "lista-procedimento", true)
+appendDatalist(estados, "lista-uf")
+appendDatalist(tabela24, "lista-cbo")
+appendDatalist(tabela26, "lista-conselho")
 
 
 // <<  SELECIONAR PROCEDIMENTOS  >>
 
-document.getElementById("TUSSInput").addEventListener('keyup', (e) => {
+document.getElementById("procedimento").addEventListener('keyup', (e) => {
             if (e.key == 'Enter') {
-               document.getElementById('adcProcedimento').click()
+               document.getElementById('botao-adc-procedimento').click()
             }}
         )
 
-document.getElementById('adcProcedimento').addEventListener('click', () => {
-    let campoTuss = document.getElementById('TUSSInput')
-    let ExameSelecionado = tuss.find(item => item.procedimento == campoTuss.value)
+document.getElementById('botao-adc-procedimento').addEventListener('click', () => {
+    let campoTuss = document.getElementById('procedimento')
+    let ExameSelecionado = tuss.find(item => item.descrição == campoTuss.value)
     procedimentosSelecionados.push(ExameSelecionado)
     removeAllChildNodes(document.getElementById('exames'))
     for (var i = 0; i < procedimentosSelecionados.length; i++) {
         var item = document.createElement("li");
-        item.innerHTML = procedimentosSelecionados[i].procedimento;
+        item.innerHTML = procedimentosSelecionados[i].descrição;
         document.getElementById('exames').appendChild(item)
         console.log(item)
     }
