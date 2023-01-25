@@ -1,38 +1,79 @@
-const search = document.getElementById('inputSADT')
-const matchList = document.getElementById('matchList')
-// import myJson from './procedimentos.json' assert {type: 'json'}
-
-const pesquisarProcedimento = async searchText => {
-    const res = await fetch('procedimentos.json')
-    const dados = await res.json()
-    let matches = dados.filter(procedimento => {
-        const regex = new RegExp(`^${searchText}`, 'gi')
-        return procedimento.procedimento.match(regex)
-    })
-if (searchText.length === 0) {
-    matches = []
-    matchList.innerHTML = ''
-}   
-    
-    outputHtml(matches);
+import tuss, {estados, tabela24, tabela26} from './start.js'
+class procedimento {
+    constructor(código, descrição) {
+        this.código = código;
+        this.descrição = descrição
+    }
 }
+let procedimentosSelecionados = []
 
-const outputHtml = matches => {
-    if (matches.length > 0) {
-        const html = matches.map(match => `
-        <div class="procedimento-card" id="${match.codigo}" onClick="selecionar(this.id)">
-            <h4 class="procedimento-titulo">${match.procedimento}</h4>
-            <small class="procedimento-codigo">${match.codigo}</small>
-        </div>
-        `).join('')
-        matchList.innerHTML = html
+
+// <<  LOCAL STORAGE  >>
+
+// Ao carregar, popular campos com local storage
+    let inputsSolicitante = document.querySelectorAll("#dadosSolicitante input")
+    for (var i=0; i < inputsSolicitante.length; i++) {
+        inputsSolicitante[i].value = localStorage.getItem(inputsSolicitante[i].id)
+    }
+
+// Salvar os dados do solicitante no local storage
+document.getElementById("lembrarSolicitante").addEventListener('click', function() {
+    let inputsSolicitante = document.querySelectorAll("#dadosSolicitante input")
+    for (var i=0; i < inputsSolicitante.length; i++) {
+        localStorage.setItem(inputsSolicitante[i].id, inputsSolicitante[i].value)
+    }
+} )
+
+// <<  DATALIST  >>
+
+function appendDatalist(listaJson, datalistID, mostrarDescricao = false) {
+    var datalistElement = document.getElementById(datalistID);
+    for (var i =0; i<listaJson.length; i++) {
+        var opção = document.createElement("option")
+        if (mostrarDescricao == false) {
+            opção.value = listaJson[i].código;
+            opção.innerHTML = listaJson[i].descrição;
+            datalistElement.appendChild(opção)
+        } else {
+            opção.innerHTML = listaJson[i].código;
+            opção.value = listaJson[i].descrição;
+            datalistElement.appendChild(opção)
+        }
     }
 }
 
-function selecionar(codigo) {
-    console.log(`${codigo} foi clicado`)
-    var element = document.getElementById(codigo);
-    element.classList.add("procedimento-ativo");
-}
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+        }
+    }
 
-search.addEventListener('input', () => pesquisarProcedimento(search.value))
+appendDatalist(tuss, "lista-procedimento", true)
+appendDatalist(estados, "lista-uf")
+appendDatalist(tabela24, "lista-cbo")
+appendDatalist(tabela26, "lista-conselho")
+
+
+// <<  SELECIONAR PROCEDIMENTOS  >>
+
+document.getElementById("procedimento").addEventListener('keyup', (e) => {
+            if (e.key == 'Enter') {
+               document.getElementById('botao-adc-procedimento').click()
+            }}
+        )
+
+document.getElementById('botao-adc-procedimento').addEventListener('click', () => {
+    let campoTuss = document.getElementById('procedimento')
+    let ExameSelecionado = tuss.find(item => item.descrição == campoTuss.value)
+    procedimentosSelecionados.push(ExameSelecionado)
+    removeAllChildNodes(document.getElementById('exames'))
+    for (var i = 0; i < procedimentosSelecionados.length; i++) {
+        var item = document.createElement("li");
+        item.innerHTML = procedimentosSelecionados[i].descrição;
+        item.contentEditable = true
+        item.classList = 'exame-descricao'
+        document.getElementById('exames').appendChild(item)
+        console.log(item)
+    }
+    campoTuss.value = null
+})

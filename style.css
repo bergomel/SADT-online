@@ -1,24 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+:root {
+    --accent: rgb(253, 127, 10);
+    --accent-rgb: 253, 127, 10;
+    --bg: #191724;
+    --txt: rgb(255,255,255);
+    --txt75: rgba(255,255,255,0.75);
+    --txt50: rgba(255,255,255,0.5);
+    --branco-rgb: 255,255,255
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent: #f87060;
+        --bg: #e5e5e5;
+        --txt: rgb(0,0,0);
+        --txt-rgb: 0,0,0;
+        --txt25: rgba(0,0,0,0.25);
+        --txt75: rgba(0,0,0,0.75);
+        --txt50: rgba(0,0,0,0.5);
+    }
+}
 
 body {
-    background-color: #282828;
+    background-color: var(--bg);
+    color: var(--txt75);
+    font-family: 'Rubik';
+    font-weight: 300;
 }
 
-.procedimento-card {
-    background-color: #333;
-    color: white;
-    font-family: 'Lato';
-    padding: 10px;
-    margin: 5px;
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    border: 2px solid rgba(var(--txt-rgb), 5%);
     border-radius: 5px;
+    margin: 15px;
+    color: var(--txt50);
+    font-size: smaller;
+    font-weight: 500;
+    padding: 20px;;
 }
 
-.procedimento-card:hover {
-    background-color: rgb(55, 55, 55);
+ol ::marker {
+    color: pink;
 }
-.procedimento-ativo {
-    border: 1px solid rgba(255,255,255,0.5);
+
+li {
+    border-bottom: 1px solid var(--txt25);
+    padding: 10px;
 }
-.procedimento-codigo {
-    opacity: 0.5;
+
+li div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li:hover .exame-deletar {
+    opacity: 1;
+}
+
+.exame-descricao {
+    flex-grow: 1;
+}
+
+.exame-codigo {
+    padding: 0 10px;
+    font-family: 'Inconsolata', monospace;
+    /* letter-spacing: 1pt; */
+    font-weight: lighter;
+    font-size:larger;
+    color: var(--txt50);
+}
+
+.exame-deletar{
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: rgba(173,255,47,0.75);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    transform: translateX(10px)
+}
+
+.exame-deletar:hover span {
+    font-size: 0;
+}
+
+.exame-deletar:hover::after{
+    font-size: 52;
+    content: "Remover";
+    padding-left: 0.5rem;
+    color: var(--accent);
+}
+
+#procedimento-div {
+    flex-grow: 0.7;
+}
+
+#procedimento {
+    width: 100%;
+}
+
+#botao-adc-procedimento {
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    background-color: rgba(var(--txt-rgb), 5%);
+    color: rgba(var(--txt-rgb), 0.3);
+    padding: 5px 12px;
+    border: 1px solid rgba(var(--txt-rgb),0.2);
+    display: none;
+}
+
+#procedimento:not(:placeholder-shown) ~ #botao-adc-procedimento {
+    display: inline;
+}
+
+#botao-adc-procedimento:focus {
+    outline: none;
+    border-color: rgba(var(--txt-rgb), 50%);
+    color: rgba(var(--txt-rgb), 75%);
+}
+
+/* NOVOS ESTILOS DE CAMPO */
+
+.campo-div {
+    position: relative;
+    margin: 5px;
+}
+
+.campo-label {
+    position: absolute;
+    left: 10px;
+    top: 1rem;
+    transition: all 0.2s;
+    padding: 0 3px;
+    margin-left: 7px;
+    z-index: 1;
+    font-weight: 400;
+    font-size: medium;
+    color: var(--txt50);
+}
+
+.campo-input {
+    padding:  0.8rem 10px 0.8rem 20px;
+    border: 2px solid rgba(var(--txt-rgb), 10%);
+    background-color: var(--bg);
+    border-radius: 5px;
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: var(--txt);
+}
+
+.campo-label::before {
+    content: "";
+    height: 5px;
+    background-color: var(--bg);
+    position: absolute;
+    top: 10px;
+    left:0px;
+    width:100%;
+    z-index: -1;
+}
+
+.campo-input:focus {
+    border: 2px solid var(--accent) !important;
+}
+
+.campo-input:focus ~ .campo-label {
+    top: -10px;
+    color: var(--accent);
+    font-size: 12px;
+}
+
+.campo-input::placeholder {
+    font-size: 16px;
+    color: rgba(var(--txt-rgb),0.3);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.campo-input:focus::placeholder {
+    opacity: 1;
+    animation-delay: 0.2s;
+}
+
+.campo-input:not(:placeholder-shown)+label{
+    top: -10px;
+    color: var(--txt50);
+    font-size: 12px;
+}
+
+.campo-input:not(:placeholder-shown){
+    border: 1px solid var(--txt50);
 }

@@ -9,16 +9,15 @@
 </head>
 
 <body>
-
     <fieldset> <legend>Dados do beneficiário</legend>
         
         <div class="campo-div">
-            <input id="nomeBeneficiario" class="campo-input" placeholder=" " size="30">
+            <input id="nomeBeneficiario" class="campo-input" placeholder=" " size="70" maxlength="70">
             <label for="nomeBeneficiario" class="campo-label">Nome</label>
         </div>
         
         <div class="campo-div">
-            <input id="campo8" class="campo-input" placeholder=" " size="10">
+            <input id="campo8" class="campo-input" placeholder=" " size="20" maxlength="20" type="tel">
             <label for="campo8" class="campo-label">Nº carteira</label>
         </div>
 
@@ -28,16 +27,16 @@
         </div>
 
         <div class="campo-div">
-            <input id="campo11" class="campo-input" placeholder=" ">
+            <input id="campo11" class="campo-input" placeholder=" " size="15" maxlength="15" type="tel">
             <label for="campo11" class="campo-label">CNS</label>
         </div>
 
         <div class="campo-div">
-            <input id="campo12" class="campo-input" placeholder=" " list="lista12" size="5">
+            <input id="campo12" class="campo-input" placeholder=" " list="lista12" size="3">
             <label for="campo12" class="campo-label">RN</label>
             <datalist id="lista12">
-                <option>Não</option>
-                <option>Sim</option>
+                <option value="N">Não</option>
+                <option value="S">Sim</option>
             </select>
         </div>
 
@@ -68,7 +67,7 @@
         </div>
 
         <div class="campo-div">
-            <input id="solicitante-cbo" class="campo-input" placeholder=" " size="8" list="lista-cbo">
+            <input id="solicitante-cbo" class="campo-input" placeholder=" " size="8" list="lista-cbo" maxlength="6">
             <label for="solicitante-cbo" class="campo-label">CBO</label>
             <datalist id="lista-cbo"></datalist>
         </div>
@@ -85,6 +84,7 @@
             <label for="procedimento" class="campo-label">Procedimento</label>
             <datalist id="lista-procedimento"></datalist>
             <button id="botao-adc-procedimento">Enter</button>
+            
         </div>
         
     </fieldset>
@@ -93,7 +93,7 @@
     <div>
         <ol id="exames">
             <li><div>
-                <span class="exame-descricao">Hemograma com contagem de plaquetas ou frações (eritrograma, leucograma, plaquetas)</span>
+                <span class="exame-descricao" contenteditable="true">Hemograma com contagem de plaquetas ou frações (eritrograma, leucograma, plaquetas)</span>
                 <span class="exame-codigo" title="código TUSS">11223344</span>
                 <button class="exame-deletar">X</button>
             </div></li>
