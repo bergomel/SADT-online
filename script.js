@@ -77,3 +77,14 @@ document.getElementById('botao-adc-procedimento').addEventListener('click', () =
     }
     campoTuss.value = null
 })
+
+// ESCONDER OS ELEMENTOS POUCO RELEVANTES
+
+document.getElementById('mostrar-todos').addEventListener('click', (e) => {
+    console.log(e.target.checked)
+    let arrayDivsOpcionais = document.getElementsByClassName('opcional')
+    for (var i=0; i < arrayDivsOpcionais.length; i++) {
+        arrayDivsOpcionais[i].style.display = (e.target.checked) ? 'block' : 'none'
+    }
+    }
+)

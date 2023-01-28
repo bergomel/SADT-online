@@ -9,24 +9,26 @@
 </head>
 
 <body>
+    <input type="checkbox" checked id="mostrar-todos">
+    <label for="mostrar-todos">Mostrar todos os itens</label>
+
     <fieldset> <legend>Dados do beneficiário</legend>
-        
         <div class="campo-div">
             <input id="nomeBeneficiario" class="campo-input" placeholder=" " size="70" maxlength="70">
             <label for="nomeBeneficiario" class="campo-label">Nome</label>
         </div>
         
-        <div class="campo-div">
+        <div class="campo-div opcional">
             <input id="campo8" class="campo-input" placeholder=" " size="20" maxlength="20" type="tel">
             <label for="campo8" class="campo-label">Nº carteira</label>
         </div>
 
-        <div class="campo-div">
+        <div class="campo-div opcional">
             <input id="campo9" class="campo-input" placeholder=" " size="10">
             <label for="campo9" class="campo-label">Validade</label>
         </div>
 
-        <div class="campo-div">
+        <div class="campo-div opcional">
             <input id="campo11" class="campo-input" placeholder=" " size="15" maxlength="15" type="tel">
             <label for="campo11" class="campo-label">CNS</label>
         </div>
@@ -66,7 +68,7 @@
             <label for="solicitante-numero" class="campo-label">Nº Conselho</label>
         </div>
 
-        <div class="campo-div">
+        <div class="campo-div opcional">
             <input id="solicitante-cbo" class="campo-input" placeholder=" " size="8" list="lista-cbo" maxlength="6">
             <label for="solicitante-cbo" class="campo-label">CBO</label>
             <datalist id="lista-cbo"></datalist>
