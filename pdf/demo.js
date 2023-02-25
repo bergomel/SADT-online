@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	url_form.addEventListener('submit', function(e) {
 		e.preventDefault();
 		var url = document.querySelector('input[name="url"]').value;
-
+		console.log(url)
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', url, true);
 		xhr.responseType = 'arraybuffer';
@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		xhr.onload = function() {
 			if (this.status == 200) {
 				on_file(url.split(/\//).pop(), this.response);
+				console.log(this.response)
 			} else {
 				on_error('failed to load URL (code: ' + this.status + ')');
 			}
@@ -155,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			on_file(file.name, ev.target.result);
 		};
 		reader.readAsArrayBuffer(file);
+		console.log(reader.readAsArrayBuffer(file));
 	});
 
 	var fill_form = document.querySelector('.fill_form');
@@ -183,3 +185,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	document.querySelector('.loading').setAttribute('style', 'display: none');
 });
+
+
+// CUSTOMIZAÇÃO
+
+var fill_ber = document.querySelector('.fill_ber');
+	fill_ber.addEventListener('submit', function(e) {
+	e.preventDefault();
+
+		var url = 'sadt em excel.pdf';
+
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url, true);
+		xhr.responseType = 'arraybuffer';
+
+		xhr.onload = function() {
+			if (this.status == 200) {
+				current_buffer = this.response;
+				console.log(this)
+			} else {
+				on_error('failed to load URL (code: ' + this.status + ')');
+			}
+		};
+
+		xhr.send();
+
+
+});
+
+function filling(buf) {
+	var fields = {
+		"10": ["Bernardo"],
+		"12": [
+			"Não"
+		],
+		"15": [
+			"Flavio"
+		],
+		"16": [
+			"CRM"
+		],
+		"17": [
+			"12130"
+		],
+		"18": [
+			"PR"
+		],
+		"19": [
+			"223047"
+		],
+		"24-1": ["aaaaa"],
+		"25-1": ["bbbb"],
+		"26-1": ["cccccc"]
+	};
+
+	var filled_pdf; // Uint8Array
+	try {
+		filled_pdf = make_pdfform().transform(buf, fields);
+	} catch (e) {
+		return on_error(e);
+	}
+
+	var blob = new Blob([filled_pdf], {type: 'application/pdf'});
+	saveAs(blob, 'pdfform.js_generated.pdf');
+}

@@ -1,4 +1,4 @@
-import tuss, {estados, tabela24, tabela26} from './start.js'
+import tuss, {estados, tabela24, tabela26, cid} from './start.js'
 class procedimento {
     constructor(código, descrição) {
         this.código = código;
@@ -52,6 +52,7 @@ appendDatalist(tuss, "lista-procedimento", true)
 appendDatalist(estados, "lista-uf")
 appendDatalist(tabela24, "lista-cbo")
 appendDatalist(tabela26, "lista-conselho")
+appendDatalist(cid, "lista-cid", true)
 
 
 // <<  SELECIONAR PROCEDIMENTOS  >>
@@ -68,12 +69,28 @@ document.getElementById('botao-adc-procedimento').addEventListener('click', () =
     procedimentosSelecionados.push(ExameSelecionado)
     removeAllChildNodes(document.getElementById('exames'))
     for (var i = 0; i < procedimentosSelecionados.length; i++) {
-        var item = document.createElement("li");
-        item.innerHTML = procedimentosSelecionados[i].descrição;
-        item.contentEditable = true
-        item.classList = 'exame-descricao'
-        document.getElementById('exames').appendChild(item)
-        console.log(item)
+        var itemDiv = document.createElement('div');
+        itemDiv.id = 'div-exame-selecionado-' + i
+        itemDiv.dataset.indice_exame_selecionado = i;
+        document.getElementById('exames').appendChild(itemDiv)
+
+        var itemDescricao = document.createElement("input");
+        itemDescricao.value = procedimentosSelecionados[i].descrição;
+        itemDescricao.classList = 'exame-descricao'
+        itemDescricao.dataset.campoReferencia = "26-" + (i+1)
+        document.getElementById(itemDiv.id).appendChild(itemDescricao)
+
+        var itemCodigo = document.createElement("input");
+        itemCodigo.value = procedimentosSelecionados[i].código;
+        itemCodigo.classList = 'exame-codigo'
+        itemCodigo.dataset.campoReferencia = "25-" + (i+1)
+        document.getElementById(itemDiv.id).appendChild(itemCodigo)
+
+        var itemQtde = document.createElement("input");
+        itemQtde.value = '1';
+        itemQtde.classList = 'exame-qtde'
+        itemQtde.dataset.campoReferencia = "27-" + (i+1)
+        document.getElementById(itemDiv.id).appendChild(itemQtde)
     }
     campoTuss.value = null
 })
@@ -88,3 +105,39 @@ document.getElementById('mostrar-todos').addEventListener('click', (e) => {
     }
     }
 )
+
+// <<  GERAR O PDF >>
+
+document.getElementById('gerar-PDF').addEventListener('click', (e) => {
+    let todosOsCampos = document.querySelectorAll('[data-campo-referencia]');
+    let objetoComValoresPreenchidos = {}
+    for (let i=0; i<todosOsCampos.length;i++) {
+        let campo = todosOsCampos[i].dataset.campoReferencia
+        let valor = todosOsCampos[i].value
+        objetoComValoresPreenchidos[campo] = [valor]
+    }
+    console.log(objetoComValoresPreenchidos)
+    let pdf_preenchido = pdfform().transform(current_buffer, objetoComValoresPreenchidos)
+    var blob = new Blob([pdf_preenchido], {type: 'application/pdf'});
+    saveAs(blob, 'guia_exames.pdf');
+})
+
+let current_buffer
+function carregarPDF() {
+    var url = '/pdf/sadt em excel.pdf';
+    console.log(url)
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function() {
+        if (this.status == 200) {
+            current_buffer = this.response;
+            console.log(current_buffer)
+        } else {
+            console.log('failed to load URL (code: ' + this.status + ')');
+        }
+    };
+    xhr.send();
+}
+window.onload = carregarPDF;

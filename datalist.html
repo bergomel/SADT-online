@@ -13,63 +13,63 @@
     <label for="mostrar-todos">Mostrar todos os itens</label>
 
     <fieldset> <legend>Dados do beneficiário</legend>
-        <div class="campo-div">
-            <input id="nomeBeneficiario" class="campo-input" placeholder=" " size="70" maxlength="70">
+        <div class="campo-div input-size-xl">
+            <input id="nomeBeneficiario" class="campo-input" placeholder=" " maxlength="70" data-campo-referencia="10">
             <label for="nomeBeneficiario" class="campo-label">Nome</label>
         </div>
         
-        <div class="campo-div opcional">
-            <input id="campo8" class="campo-input" placeholder=" " size="20" maxlength="20" type="tel">
+        <div class="campo-div input-size-s opcional">
+            <input id="campo8" class="campo-input" placeholder=" " maxlength="20" type="tel" data-campo-referencia="8">
             <label for="campo8" class="campo-label">Nº carteira</label>
         </div>
 
-        <div class="campo-div opcional">
-            <input id="campo9" class="campo-input" placeholder=" " size="10">
+        <div class="campo-div input-size-s opcional">
+            <input id="campo9" class="campo-input" placeholder=" " data-campo-referencia="9">
             <label for="campo9" class="campo-label">Validade</label>
         </div>
 
-        <div class="campo-div opcional">
-            <input id="campo11" class="campo-input" placeholder=" " size="15" maxlength="15" type="tel">
+        <div class="campo-div input-size-s opcional">
+            <input id="campo11" class="campo-input" placeholder=" " maxlength="15" type="tel" data-campo-referencia="11">
             <label for="campo11" class="campo-label">CNS</label>
         </div>
 
-        <div class="campo-div">
-            <input id="campo12" class="campo-input" placeholder=" " list="lista12" size="3">
-            <label for="campo12" class="campo-label">RN</label>
-            <datalist id="lista12">
+        <div class="campo-div input-size-s">
+            <select id="campo12" class="campo-select input-size-s" placeholder="RN" data-campo-referencia="12">
+                <option value="" selected> </option>
                 <option value="N">Não</option>
                 <option value="S">Sim</option>
             </select>
+            <label for="campo12" class="campo-label">RN</label>
         </div>
 
     </fieldset>
 
     <fieldset id="dadosSolicitante">
         <legend>Dados do solicitante</legend>
-        <div class="campo-div">
-            <input id="nomeSolicitante" class="campo-input" placeholder=" " size="30">
+        <div class="campo-div input-size-xl">
+            <input id="nomeSolicitante" class="campo-input" placeholder=" " data-campo-referencia="15">
             <label for="nomeSolicitante" class="campo-label">Nome</label>
         </div>
         
-        <div class="campo-div">
-            <input id="solicitante-conselho" class="campo-input" placeholder=" " size="8" list="lista-conselho">
+        <div class="campo-div input-size-s">
+            <input id="solicitante-conselho" class="campo-input" placeholder=" " list="lista-conselho" data-campo-referencia="16">
             <label for="solicitante-conselho" class="campo-label">Conselho</label>
             <datalist id="lista-conselho"></datalist>
         </div>
         
         <div class="campo-div">
-            <input id="solicitante-uf" class="campo-input" placeholder=" " size="4" list="lista-uf">
+            <input id="solicitante-uf" class="campo-input" placeholder=" " size="4" list="lista-uf" data-campo-referencia="18">
             <label for="solicitante-uf" class="campo-label">UF</label>
             <datalist id="lista-uf"></datalist>
         </div>
         
         <div class="campo-div">
-            <input id="solicitante-numero" class="campo-input" placeholder=" " size="8">
+            <input id="solicitante-numero" class="campo-input" placeholder=" " size="8" data-campo-referencia="17">
             <label for="solicitante-numero" class="campo-label">Nº Conselho</label>
         </div>
 
         <div class="campo-div opcional">
-            <input id="solicitante-cbo" class="campo-input" placeholder=" " size="8" list="lista-cbo" maxlength="6">
+            <input id="solicitante-cbo" class="campo-input" placeholder=" " size="8" list="lista-cbo" maxlength="6" data-campo-referencia="19">
             <label for="solicitante-cbo" class="campo-label">CBO</label>
             <datalist id="lista-cbo"></datalist>
         </div>
@@ -80,27 +80,48 @@
     </fieldset>
 
     <fieldset> <legend>Dados da solicitação</legend>
+        <div class="campo-div input-size-l">
+            <input id="indicacao" class="campo-input" placeholder="CID-10 ou descrição do caso" list="lista-cid">
+            <label for="indicacao" class="campo-label">Indicação clínica</label>
+            <datalist id="lista-cid"></datalist>
+        </div>
+
+        <div class="campo-div input-size-m opcional">
+            <input id="data-solicitacao" class="campo-input" placeholder=" ">
+            <label for="data-solicitacao" class="campo-label">Data</label>
+        </div>
         
         <div class="campo-div" id="procedimento-div">
             <input id="procedimento" class="campo-input" placeholder="Digite para pesquisar" list="lista-procedimento">
             <label for="procedimento" class="campo-label">Procedimento</label>
             <datalist id="lista-procedimento"></datalist>
             <button id="botao-adc-procedimento">Enter</button>
-            
         </div>
         
     </fieldset>
 
     <h3>Exames selecionados</h3>
     <div>
+        <div class="exame-selecionado-div-B">
+            <input type="text" class="exame-selecionado-descricao-B" value="Hemograma com contagem de plaquetas ou frações (eritrograma, leucograma, plaquetas)">
+            <input type="text" class="exame-selecionado-codigo-B" value="11223344">
+            <input type="number" min="1" max="999" class="exame-selecionado-qtde-B" value="1">
+        </div>
         <ol id="exames">
             <li><div>
-                <span class="exame-descricao" contenteditable="true">Hemograma com contagem de plaquetas ou frações (eritrograma, leucograma, plaquetas)</span>
-                <span class="exame-codigo" title="código TUSS">11223344</span>
+                <span class="exame-descricao" contenteditable="true" spellcheck="false" data-campo-referencia="25-1">Hemograma com contagem de plaquetas ou frações (eritrograma, leucograma, plaquetas)</span>
+                <span class="exame-codigo" title="código TUSS" contenteditable="true" data-campo-referencia="24-1">11223344</span>
                 <button class="exame-deletar">X</button>
             </div></li>
         </ol>
     </div>
-      <script type="module" src="script.js"></script>
+    <button class="submit" name="gerar-PDF" id="gerar-PDF">Gerar PDF</button>
+
+    <script type="module" src="script.js"></script>
+    <script src="pdf/minipdf.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.3/pako.min.js" integrity="sha256-X7u/eQo6oIgWqc5jOmTjQn3loM8Lse0ock76Gkkn/Ro=" crossorigin="anonymous"></script>
+    <script src="pdf/pdfform.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.0.0/FileSaver.min.js"></script>
+
 </body>
 </html>
