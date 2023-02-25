@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server:  ftp.gomel.med.br
-        username: ber@gomel.med.br
+        username: bgomel@gomel.med.br
         password: ${{ secrets.ftp_password }}
-        server-dir: public_html/SADT/
+        server-dir: SADT/
