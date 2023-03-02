@@ -1,10 +1,16 @@
-import tuss, {estados, tabela24, tabela26, cid} from './start.js'
-class procedimento {
-    constructor(código, descrição) {
-        this.código = código;
-        this.descrição = descrição
-    }
+// import tuss, {estados, tabela24, tabela26, cid} from './start.js'
+// let estados1 = []
+
+
+async function fetchJSON() {
+    const response = await fetch('../estados-brasileiros.json');
+     const estados1 = await response.json();
+     console.log(estados1)
+     return estados1;
 }
+
+fetchJSON().then(estados1 => {estados1; appendDatalist(estados1, "lista-uf")})
+
 let procedimentosSelecionados = []
 
 
@@ -26,17 +32,17 @@ document.getElementById("lembrarSolicitante").addEventListener('click', function
 
 // <<  DATALIST  >>
 
-function appendDatalist(listaJson, datalistID, mostrarDescricao = false) {
+function appendDatalist(estadosJson, datalistID, mostrarDescricao = false) {
     var datalistElement = document.getElementById(datalistID);
-    for (var i =0; i<listaJson.length; i++) {
+    for (var i =0; i<estadosJson.length; i++) {
         var opção = document.createElement("option")
         if (mostrarDescricao == false) {
-            opção.value = listaJson[i].código;
-            opção.innerHTML = listaJson[i].descrição;
+            opção.value = estadosJson[i].código;
+            opção.innerHTML = estadosJson[i].descrição;
             datalistElement.appendChild(opção)
         } else {
-            opção.innerHTML = listaJson[i].código;
-            opção.value = listaJson[i].descrição;
+            opção.innerHTML = estadosJson[i].código;
+            opção.value = estadosJson[i].descrição;
             datalistElement.appendChild(opção)
         }
     }
@@ -48,11 +54,10 @@ function removeAllChildNodes(parent) {
         }
     }
 
-appendDatalist(tuss, "lista-procedimento", true)
-appendDatalist(estados, "lista-uf")
-appendDatalist(tabela24, "lista-cbo")
-appendDatalist(tabela26, "lista-conselho")
-appendDatalist(cid, "lista-cid", true)
+// appendDatalist(tuss, "estados-procedimento", true)
+// appendDatalist(tabela24, "estados-cbo")
+// appendDatalist(tabela26, "estados-conselho")
+// appendDatalist(cid, "estados-cid", true)
 
 
 // <<  SELECIONAR PROCEDIMENTOS  >>
