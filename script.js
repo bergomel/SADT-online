@@ -3,7 +3,7 @@
 
 
 async function fetchJSON() {
-    const response = await fetch('../estados-brasileiros.json');
+    const response = await fetch('estados-brasileiros.json');
      const estados1 = await response.json();
      console.log(estados1)
      return estados1;
