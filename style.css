@@ -14,22 +14,22 @@
     --branco-rgb: 255,255,255;
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
     :root {
-        --accent: #f87060;
-        --bg: #e5e5e5;
+        --accent: #0C024F;
+        --bg: #fff;
         --txt: rgb(0,0,0);
         --txt-rgb: 0,0,0;
         --txt25: rgba(0,0,0,0.25);
         --txt75: rgba(0,0,0,0.75);
         --txt50: rgba(0,0,0,0.5);
     }
-} */
+}
 
 body {
     background-color: var(--bg);
     color: var(--txt75);
-    font-family: 'Rubik';
+    font-family: 'Work sans';
     font-weight: 300;
 }
 

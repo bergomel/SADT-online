@@ -2,14 +2,18 @@
 // let estados1 = []
 
 
-async function fetchJSON() {
-    const response = await fetch('estados-brasileiros.json');
-     const estados1 = await response.json();
-     console.log(estados1)
-     return estados1;
+async function fetchJSON(caminho) {
+    const response = await fetch(caminho);
+    const json = await response.json();
+    return json;
 }
 
-fetchJSON().then(estados1 => {estados1; appendDatalist(estados1, "lista-uf")})
+fetchJSON('cid10.json')
+    .then(json => {
+        appendDatalist(json, 'lista-cid', true);
+        const cid10 = json })
+
+fetchJSON('estados-brasileiros.json').then(estados1 => {estados1; appendDatalist(estados1, "lista-uf")})
 
 let procedimentosSelecionados = []
 
