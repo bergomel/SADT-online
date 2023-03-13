@@ -221,7 +221,7 @@ li:hover .exame-deletar {
 .campo-select {
     padding:  16px 8px 0.6rem 16px;
     border: 1px solid rgba(var(--txt-rgb), 15%);
-    background-color: rgba(var(--txt-rgb), 4%);
+    background-color: transparent;
     border-radius: 5px;
     font-family: 'Rubik';
     font-weight: 600;

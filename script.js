@@ -13,7 +13,10 @@ fetchJSON('cid10.json')
         appendDatalist(json, 'lista-cid', true);
         const cid10 = json })
 
-fetchJSON('estados-brasileiros.json').then(estados1 => {estados1; appendDatalist(estados1, "lista-uf")})
+fetchJSON('estados-brasileiros.json').then(json => {json; appendDatalist(json, "lista-uf")})
+fetchJSON('tabela24.json').then(json => {json; appendDatalist(json, "lista-cbo")})
+fetchJSON('tabela26.json').then(json => {json; appendDatalist(json, "lista-conselho")})
+fetchJSON('procedimentos.json').then(json => {json; appendDatalist(json, "lista-procedimento", true)})
 
 let procedimentosSelecionados = []
 
