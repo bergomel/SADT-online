@@ -31,10 +31,11 @@ fetchJSON('tabela26.json')
 fetchJSON('procedimentos.json')
     .then(json => {
         appendDatalist(json, "lista-procedimento", true);
-        var tuss = json})
+        tuss = json;
+        console.log(tuss)})
 
 let procedimentosSelecionados = []
-
+let tuss = []
 
 // <<  LOCAL STORAGE  >>
 
