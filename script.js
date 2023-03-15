@@ -13,10 +13,25 @@ fetchJSON('cid10.json')
         appendDatalist(json, 'lista-cid', true);
         const cid10 = json })
 
-fetchJSON('estados-brasileiros.json').then(json => {json; appendDatalist(json, "lista-uf")})
-fetchJSON('tabela24.json').then(json => {json; appendDatalist(json, "lista-cbo")})
-fetchJSON('tabela26.json').then(json => {json; appendDatalist(json, "lista-conselho")})
-fetchJSON('procedimentos.json').then(json => {json; appendDatalist(json, "lista-procedimento", true)})
+fetchJSON('estados-brasileiros.json')
+    .then(json => {
+        appendDatalist(json, "lista-uf");
+        const uf = json})
+
+fetchJSON('tabela24.json')
+    .then(json => {
+        appendDatalist(json, "lista-cbo");
+        const tabela24 = json})
+
+fetchJSON('tabela26.json')
+    .then(json => {
+        appendDatalist(json, "lista-conselho");
+        const tabela26 = json})
+
+fetchJSON('procedimentos.json')
+    .then(json => {
+        appendDatalist(json, "lista-procedimento", true);
+        const tuss = json})
 
 let procedimentosSelecionados = []
 
@@ -136,7 +151,7 @@ document.getElementById('gerar-PDF').addEventListener('click', (e) => {
 
 let current_buffer
 function carregarPDF() {
-    var url = '/pdf/sadt em excel.pdf';
+    var url = 'pdf/sadt em excel.pdf';
     console.log(url)
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
