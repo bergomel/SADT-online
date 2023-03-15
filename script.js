@@ -11,27 +11,27 @@ async function fetchJSON(caminho) {
 fetchJSON('cid10.json')
     .then(json => {
         appendDatalist(json, 'lista-cid', true);
-        const cid10 = json })
+        var cid10 = json })
 
 fetchJSON('estados-brasileiros.json')
     .then(json => {
         appendDatalist(json, "lista-uf");
-        const uf = json})
+        var uf = json})
 
 fetchJSON('tabela24.json')
     .then(json => {
         appendDatalist(json, "lista-cbo");
-        const tabela24 = json})
+        var tabela24 = json})
 
 fetchJSON('tabela26.json')
     .then(json => {
         appendDatalist(json, "lista-conselho");
-        const tabela26 = json})
+        var tabela26 = json})
 
 fetchJSON('procedimentos.json')
     .then(json => {
         appendDatalist(json, "lista-procedimento", true);
-        const tuss = json})
+        var tuss = json})
 
 let procedimentosSelecionados = []
 
