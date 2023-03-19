@@ -147,7 +147,8 @@ document.getElementById('gerar-PDF').addEventListener('click', (e) => {
     console.log(objetoComValoresPreenchidos)
     let pdf_preenchido = pdfform().transform(current_buffer, objetoComValoresPreenchidos)
     var blob = new Blob([pdf_preenchido], {type: 'application/pdf'});
-    saveAs(blob, 'guia_exames.pdf');
+    var nomeBeneficiario = objetoComValoresPreenchidos[10][0]
+    saveAs(blob, `guia_${nomeBeneficiario}.pdf`);
 })
 
 let current_buffer
