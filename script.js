@@ -119,6 +119,13 @@ document.getElementById('botao-adc-procedimento').addEventListener('click', () =
         itemQtde.classList = 'exame-qtde'
         itemQtde.dataset.campoReferencia = "27-" + (i+1)
         document.getElementById(itemDiv.id).appendChild(itemQtde)
+
+        var itemDeletar = document.createElement("button");
+        itemDeletar.innerText = 'deletar';
+        // itemDeletar.classList = 'exame-deletar';
+        itemDeletar.dataset.campoReferencia = "27-" + (i+1);
+        itemDeletar.dataset.indice_exame_selecionado = i;
+        document.getElementById(itemDiv.id).appendChild(itemDeletar);
     }
     campoTuss.value = null
 })
