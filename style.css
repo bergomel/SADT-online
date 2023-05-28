@@ -175,29 +175,15 @@ li:hover .exame-deletar {
     display: inline;
 }
 
-/* TAMANHOS DE CAMPO */
-
-.input-size-s{
-    min-width: 4em;
-}
-.input-size-m{
-    min-width: 8em;
-}
-.input-size-l{
-    min-width: 16em;
-}
-.input-size-xl{
-    min-width: 24em;
-}
-
-
 /* NOVOS ESTILOS DE CAMPO */
 
 .campo-div {
     position: relative;
     margin: 10px;
     flex-shrink: 1;
-    flex-grow: 1;
+    flex-grow: 0;
+    width: 8rem;
+    transition: width 3s ease-in-out;
 }
 
 .campo-label {
@@ -243,6 +229,10 @@ li:hover .exame-deletar {
     left:0px;
     width:100%;
     z-index: -1;
+}
+
+.compo-input:placeholder-shown {
+    width: 100px;
 }
 
 .campo-input:focus,
@@ -299,4 +289,20 @@ li:hover .exame-deletar {
     background-color: var(--accent);
     color: var(--bg);
     font-weight: 900;
+}
+
+
+/* TAMANHOS DE CAMPO */
+
+.input-size-s:focus-within, .input-size-s:has(input:not(:placeholder-shown)){
+    min-width: 8em;
+}
+.input-size-m:focus-within, .input-size-m:has(input:not(:placeholder-shown)){
+    min-width: 12em;
+}
+.input-size-l:focus-within, .input-size-l:has(input:not(:placeholder-shown)){
+    min-width: 16em;
+}
+.input-size-xl:focus-within, .input-size-xl:has(input:not(:placeholder-shown)){
+    min-width: 24em;
 }
