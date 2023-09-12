@@ -95,37 +95,38 @@ document.getElementById('botao-adc-procedimento').addEventListener('click', () =
     let campoTuss = document.getElementById('procedimento')
     let ExameSelecionado = tuss.find(item => item.descrição == campoTuss.value)
     procedimentosSelecionados.push(ExameSelecionado)
-    removeAllChildNodes(document.getElementById('exames'))
+    removeAllChildNodes(document.getElementById('container-exames-selecionados'))
     for (var i = 0; i < procedimentosSelecionados.length; i++) {
         var itemDiv = document.createElement('div');
         itemDiv.id = 'div-exame-selecionado-' + i
         itemDiv.dataset.indice_exame_selecionado = i;
-        document.getElementById('exames').appendChild(itemDiv)
+        itemDiv.classList = 'exame-selecionado'
+        document.getElementById('container-exames-selecionados').appendChild(itemDiv)
 
-        var itemDescricao = document.createElement("input");
-        itemDescricao.value = procedimentosSelecionados[i].descrição;
-        itemDescricao.classList = 'exame-descricao'
+        var itemDescricao = document.createElement("p");
+        itemDescricao.innerText = procedimentosSelecionados[i].descrição;
+        itemDescricao.classList = 'exame-selecionado-descricao'
         itemDescricao.dataset.campoReferencia = "26-" + (i+1)
         document.getElementById(itemDiv.id).appendChild(itemDescricao)
 
-        var itemCodigo = document.createElement("input");
-        itemCodigo.value = procedimentosSelecionados[i].código;
-        itemCodigo.classList = 'exame-codigo'
+        var itemCodigo = document.createElement("span");
+        itemCodigo.innerText = procedimentosSelecionados[i].código;
+        itemCodigo.classList = 'exame-selecionado-TUSS'
         itemCodigo.dataset.campoReferencia = "25-" + (i+1)
         document.getElementById(itemDiv.id).appendChild(itemCodigo)
 
-        var itemQtde = document.createElement("input");
-        itemQtde.value = '1';
-        itemQtde.classList = 'exame-qtde'
+        var itemQtde = document.createElement("span");
+        itemQtde.innerText = '1';
+        itemQtde.classList = 'exame-selecionado-qtde'
         itemQtde.dataset.campoReferencia = "27-" + (i+1)
         document.getElementById(itemDiv.id).appendChild(itemQtde)
 
-        var itemDeletar = document.createElement("button");
-        itemDeletar.innerText = 'deletar';
-        // itemDeletar.classList = 'exame-deletar';
-        itemDeletar.dataset.campoReferencia = "27-" + (i+1);
-        itemDeletar.dataset.indice_exame_selecionado = i;
-        document.getElementById(itemDiv.id).appendChild(itemDeletar);
+        // var itemDeletar = document.createElement("button");
+        // itemDeletar.innerText = 'deletar';
+        // // itemDeletar.classList = 'exame-deletar';
+        // itemDeletar.dataset.campoReferencia = "27-" + (i+1);
+        // itemDeletar.dataset.indice_exame_selecionado = i;
+        // document.getElementById(itemDiv.id).appendChild(itemDeletar);
     }
     campoTuss.value = null
 })
