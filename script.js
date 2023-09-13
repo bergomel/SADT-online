@@ -149,7 +149,7 @@ document.getElementById('gerar-PDF').addEventListener('click', (e) => {
     let objetoComValoresPreenchidos = {}
     for (let i=0; i<todosOsCampos.length;i++) {
         let campo = todosOsCampos[i].dataset.campoReferencia
-        let valor = todosOsCampos[i].value
+        let valor = todosOsCampos[i].innerText
         objetoComValoresPreenchidos[campo] = [valor]
     }
     console.log(objetoComValoresPreenchidos)
